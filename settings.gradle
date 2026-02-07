@@ -7,3 +7,5 @@ pluginManagement {
         mavenLocal()
     }
 }
+
+include "mod-with-library"

@@ -1,14 +1,15 @@
 [versions]
 minecraft = "1.16.1"
 yarn_mappings = "1.16.1-build.28"
-fabric_loader = "0.18.0"
-loom = "1.12-SNAPSHOT"
+fabric_loader = "0.18.4"
+loom = "1.15-SNAPSHOT"
+shadow = "9.3.1"
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
 yarn_mappings = { module = "dev.tildejustin:yarn", version.ref = "yarn_mappings" }
-# yarn_mappings = { module = "net.fabricmc:yarn", version.ref = "yarn_mappings" }
 fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric_loader" }
 
 [plugins]
 fabric_loom = { id = "fabric-loom", version.ref = "loom" }
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
