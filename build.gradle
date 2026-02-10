@@ -12,6 +12,7 @@ base {
 
 repositories {
     maven { url "https://jitpack.io" }
+    mavenLocal()
     // flatDir { dirs "libs" }
 }
 
@@ -30,7 +31,10 @@ dependencies {
     minecraft libs.minecraft
     mappings variantOf(libs.yarn.mappings) { classifier "v2" }
     modImplementation libs.fabric.loader
-    implementation(project(path: ":mod-with-library"))
+    // modImplementation "net.fabricmc:fabric-loader:0.18.4+local-1"
+    implementation(project(path: ":mod-with-library")) {
+        transitive = false
+    }
 }
 
 processResources {
